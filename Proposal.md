@@ -77,3 +77,6 @@ After opening C, the constraint of 2 comes to its solution with mines at B and D
 00000
 ```
 
+## Demo
+
+Temporarily we have two plans of demo. Plan A is solving on [Minesweeper Online](https://http://minesweeperonline.com/) with Javascript. Plan B is making a Java minesweeper game on our own and solving it.
