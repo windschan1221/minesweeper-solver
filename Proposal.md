@@ -1,9 +1,12 @@
 # COMP7404 Project
 
 Topic: Minesweeper Auto Solver
+
 Group T Members:
+
 CHEN Weizhe 3035029706
-Li Qin
+
+LI Qin
 
 ## Problem
 
@@ -11,7 +14,34 @@ Minesweeper is a classic puzzle game. The goal of the game is to clear a rectang
 
 There are three default levels of difficulty: Beginner (9x9 grid with 10 mines), Intermediate (16x16 grid with 40 mines) and Expert (16x30 grid with 99 mines). Our final product will be tested by Expert level game.
 
-## Constraint Satisfying Problem
+## Constraint Satisfaction Problem
 
-The gameplay is essentially continuously solving Constraint Satisfying Problems (CSP). There will be mainly three kinds of CSP in the game:
+The gameplay is essentially continuously solving Constraint Satisfaction Problems (CSP). The following is one typical example:
+```
+xxx20
+1xx20
+23210
+!1000
+```
+Numbers are opened safe squares with number of surrounding mines, x are unopened squares and ! are marked mines. Determining whether each unopened square is a mine becomes a sub-CSP.
 
+There are three actions we can take in solving minesweeper.
+
+1. Marking Mines
+```
+xxC20 
+1BA20
+23210
+!1000
+```
+
+For square A, it is the only square to place a mine in order to satisfy the constraint of 1. Therefore, it can be marked as mine.
+Similar deduction can be applied on B and C, which are also mines to satisfy the constraints of other 2's. 
+
+So the board becomes the following after marking mines:
+```
+xx!20 
+1!!20
+23210
+!1000
+```
