@@ -35,12 +35,23 @@ xxC20
 !1000
 ```
 
-For square A, it is the only square to place a mine in order to satisfy the constraint of 1. Therefore, it can be marked as mine.
-Similar deduction can be applied on B and C, which are also mines to satisfy the constraints of other 2's. 
+For square A, it is the only square to place a mine in order to satisfy the constraint of 1 on the 3rd row. Therefore, it can be marked as mine.
+
+Similar deduction can be applied on B and C, which are also mines to satisfy the constraints of the 2's on the 3rd and 2nd rows. 
 
 So the board becomes the following after marking mines:
 ```
 xx!20 
+1!!20
+23210
+!1000
+```
+
+2. Opening Safe Squares
+After marking the mines, the constraint of 1 on the 2nd row has been satisfied. Therefore, the remaining two squares and absolutely safe and opened. Then the board becomes the following:
+
+```
+24!20 
 1!!20
 23210
 !1000
