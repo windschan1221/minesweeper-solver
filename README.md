@@ -1,1 +1,0 @@
-# minesweeper-solver
