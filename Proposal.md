@@ -25,6 +25,8 @@ xxx20
 ```
 Numbers are opened safe squares with number of surrounding mines, x are unopened squares and ! are marked mines. Determining whether each unopened square is a mine becomes a sub-CSP.
 
+## Methodology
+
 There are three actions we can take in solving minesweeper.
 
 1. Marking Mines
@@ -56,3 +58,22 @@ After marking the mines, the constraint of 1 on the 2nd row has been satisfied. 
 23210
 !1000
 ```
+
+3. Forward Checking
+Consider another board as following:
+``` 
+ABCDE
+11211
+00000
+```
+ABCDE are temporarily not opened nor marked. Action 1 and 2 are not applicable so it seems that we can leave it at this moment. However, we can actually come up with a solution with forward checking.
+
+Considering square C is a mine, then the constraint of 1's below B and below D are satisfied and ABDE are marked as safe. However, the constraint of 2 below C is no longer solvable because only 1 mine is found around it. The conclusion is that square C is impossible to be a mine.
+
+After opening C, the constraint of 2 comes to its solution with mines at B and D.
+``` 
+2!3!1
+11211
+00000
+```
+
