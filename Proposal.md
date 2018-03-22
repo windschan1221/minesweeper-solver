@@ -6,7 +6,7 @@ Group T Members:
 
 CHEN Weizhe 3035029706
 
-LI Qin
+LI Qin 3035419511
 
 ## Problem
 
