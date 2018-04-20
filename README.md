@@ -18,6 +18,9 @@ The package can be downloaded by `pip install pywin32` in the cmd.
 ## Download Minesolver
 Download minesolver_v5.py and guess.txt and put them in the same folder.
 
+## Windows Setting
+Use 1920x1080 as resolution.
+
 ## Minesweeper X Settings
 Download automine.bmp and put it in the same folder with Minesweeper X.
 Open Minesweeper X, click "Extras->Custom Skin..." and select automine.bmp.
